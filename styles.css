@@ -458,6 +458,96 @@ i {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.k-footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px;
+  font-size: 0.9em;
+  direction: rtl;
+}
+
+.k-footer__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.k-footer__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* space between icons */
+  margin-top: 8px;
+}
+
+.k-footer__icons img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.k-footer__icons img:hover {
+  transform: scale(1.1);
+}
+
+.k-footer__links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 30px;
+  text-align: right;
+}
+
+.k-footer__links h4 {
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #f8f8f8;
+}
+
+.k-footer__links a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 6px;
+  transition: color 0.3s;
+}
+
+.k-footer__links a:hover {
+  color: #d63384;
+}
+
+.k-footer__badges {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.k-footer__badges img {
+  height: 50px;
+}
+
+.k-footer__bottom {
+  font-size: 0.8em;
+  color: #999;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .k-footer__links {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
 /* 📱 Responsive Tweaks */
 @media (max-width: 768px) {
   .banner-overlay {
