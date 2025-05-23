@@ -1,0 +1,529 @@
+/* Core Layout */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Vazirmatn', 'IRANYekan', sans-serif;
+  background-color: #fffafc;
+  color: #333;
+  line-height: 1.6;
+  direction: rtl;
+}
+
+body {
+  padding-top: 40px; /* Adjust to match banner height */
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 0;
+}
+
+/* Headings */
+h2,
+h3 {
+  color: #d63384;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Sections */
+section {
+  padding: 30px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sticky-top-banner {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: #d63384;
+  color: white;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 0.95em;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  direction: rtl;
+  unicode-bidi: plaintext; /* 💥 smooth out visual alignment for mixed content */
+  box-sizing: border-box;
+  margin:0;
+}
+
+
+/* 🎂 Hero Banner */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 30px;
+  background: rgba(255, 192, 203, 0.3);
+  text-align: center;
+  direction: ltr
+}
+
+/* Timer */
+.banner-timer {
+  background-color: rgba(214, 51, 132, 0.75);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.95em;
+  margin-top: 20px;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 300px;
+  width: 100%;
+  margin-top: auto;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+.scroll-down-arrow {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d63384;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  overflow: visible;
+  padding: 0;
+  animation: bounce 2.4s infinite ease-in-out;
+}
+
+
+.scroll-down-arrow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(214, 51, 132, 0.35);
+  animation: pulse 2s infinite ease-out;
+  z-index: -1;
+}
+
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.scroll-down-arrow.up .arrow-icon {
+  transform: rotate(180deg);
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-6px);
+  }
+}
+
+
+
+.scroll-down-arrow:hover {
+  background-color: #b12a6c;
+}
+
+.scroll-down-arrow span {
+  display: inline-block;
+  line-height: 1;
+  transform: translateY(2px); /* vertical center tweak */
+}
+
+
+.product-carousel {
+  /* margin: 40px 0; */
+  width: 100%;
+}
+
+.carousel-title {
+  text-align: right;
+  font-size: 1.4em;
+  margin-bottom: 16px;
+  color: #d63384;
+  padding-right: 20px;
+}
+
+.swiper-slide {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.mySwiper {
+  --swiper-navigation-color: #d63384;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  width: 24px;
+  height: 24px;
+  font-size: 8px;
+
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
+}
+
+i {
+  color: crimson;
+}
+
+.timer-text {
+  font-size: 1em;
+  /* margin-bottom: 4px; */
+}
+
+.timer-label {
+  font-size: 0.85em;
+  line-height: 1.4;
+  color: #fff2f7;
+}
+
+/* Countdown Container (if used elsewhere) */
+.countdown-container {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.mid-banner {
+  margin: 10px 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.mid-banner picture,
+.mid-banner img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.category-section {
+  margin: 10px 0;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.category-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #d63384;
+  direction: rtl;
+  text-align: center; /* ✅ center the block */
+  margin: 0 auto 16px;
+  max-width: fit-content;
+  margin-top:20px;
+}
+
+.category-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.category-card {
+  flex: 1 1 calc(50% - 16px); /* 2 per row on mobile */
+  max-width: 160px;
+  aspect-ratio: 1 / 1;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+}
+
+.video-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 60px 0;
+  padding: 0 16px;
+}
+
+.video-box,
+.text-box {
+  flex: 1 1 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.video-box video {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+.text-box h3 {
+  font-size: 1.2em;
+  margin-bottom: 12px;
+  color: #d63384;
+}
+
+.text-box p {
+  font-size: 0.95em;
+  color: #444;
+  line-height: 1.6;
+}
+
+#timer {
+  font-weight: bold;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+/* 🎁 Gift Items */
+.gifts {
+  background-color: #fff0f5;
+  text-align: center;
+}
+
+.gift-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gift-items img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* 📣 Call to Action */
+.cta {
+  background-color: #ffdee9;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #880e4f;
+}
+
+/* 🧩 Cards Grid */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #ffe3ec;
+  border-radius: 10px;
+  padding: 20px 30px;
+  min-width: 120px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #fce4ec;
+}
+
+/* 💎 Featured Section */
+.featured {
+  background-color: #fce4ec;
+  text-align: center;
+}
+
+/* 📌 Banner Bottom */
+.banner.bottom {
+  background-color: #ffe6f0;
+}
+
+.banner.bottom .card {
+  background-color: #fff;
+}
+
+/* 🎬 Video & Text */
+.video-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  background-color: #f3e5f5;
+  padding: 40px 20px;
+}
+
+.video,
+.text {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 📱 Responsive Tweaks */
+@media (max-width: 768px) {
+  .banner-overlay {
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    padding: 40px 20px 10px 20px;
+  }
+
+  .video-text {
+    flex-direction: column;
+
+    .banner-title {
+      font-size: 1.5em;
+    }
+
+    .banner-timer {
+      font-size: 1em;
+      margin-top: 20px;
+      max-width: 100%;
+      direction: rtl;
+      align-self: center;
+    }
+
+    .product-card {
+      flex: 0 0 240px;
+    }
+
+    .gift-items {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cards {
+      flex-direction: column;
+    }
+
+    .video-text {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: stretch;
+      background-color: #f3e5f5;
+      padding: 40px 20px;
+      gap: 20px;
+      /* Optional, cleaner than margin between children */
+      box-sizing: border-box;
+    }
+
+    .video,
+    .text {
+      flex: 1 1 300px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .category-row {
+    justify-content: space-between; /* wider spread */
+  }
+
+  .category-card {
+    flex: 1 1 calc(25% - 16px); /* 4 per row */
+    max-width: 220px;
+    aspect-ratio: 4 / 3;
+  }
+}
