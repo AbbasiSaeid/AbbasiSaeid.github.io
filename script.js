@@ -117,7 +117,16 @@ questions.forEach((q) => {
 // 
 // 
 // 
-const sheetURL = 'https://api.sheetbest.com/sheets/693521a9-32fb-42e9-bc2c-6447a06be207'; // replace with your real one
+
+function formatPrice(num) {
+  return toPersianDigits(Number(num).toLocaleString("fa-IR")) + ' تومان';
+}
+
+const sheetURL = 'https://script.google.com/macros/s/AKfycby33KjBjIUPsu0qWl546Q5Spx2ifyRMoBhc6U4xBBwjGDHIxAtzKm6bMaZgoQH1mhZy/exec';
+
+function formatPrice(num) {
+  return toPersianDigits(Number(num).toLocaleString("fa-IR")) + ' تومان';
+}
 
 fetch(sheetURL)
   .then(res => res.json())
@@ -129,22 +138,39 @@ fetch(sheetURL)
     sorted.forEach(item => {
       const slide = document.createElement("div");
       slide.className = "swiper-slide";
+
       slide.innerHTML = `
         <a href="${item.link || '#'}" target="_blank" class="product-card">
           <img src="${item.image_url}" alt="${item.title}" />
           <h4>${item.title}</h4>
-          <p><del>${item.price} تومان</del> <strong>${item.sale_price} تومان</strong></p>
+          <p></p>
         </a>
       `;
+
+      // Insert formatted prices
+      const p = slide.querySelector("p");
+      p.innerHTML = `
+  <del style="display:block; color:#999; font-size: 0.75rem; line-height: 1.2;">${formatPrice(item.price)}</del>
+  <strong style="display:block; color:#d63384; font-size: 0.9rem; font-weight: bold; line-height: 1.4;">${formatPrice(item.sale_price)}</strong>
+`;
+
+
       document.getElementById("campaign-carousel").appendChild(slide);
     });
 
     new Swiper(".second-swiper", {
-      slidesPerView: 1.5,
-      spaceBetween: 10,
+      slidesPerView: 2.5,
+      spaceBetween: 12,
+      grabCursor: true,
+      freeMode: true,
+      loop: true,
+      navigation: {
+        nextEl: ".second-swiper-next",
+        prevEl: ".second-swiper-prev"
+      },
       breakpoints: {
         768: {
-          slidesPerView: 4,
+          slidesPerView: 6,
           spaceBetween: 20
         }
       }
