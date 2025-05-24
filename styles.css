@@ -37,7 +37,7 @@ section {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 0;
   width: 100%;
@@ -69,36 +69,28 @@ section {
   width: 100%;
   overflow: hidden;
   margin: 0;
+  margin-top:8px;
   padding: 0;
 }
 
 .banner-img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
 }
 
 .banner-overlay {
   position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: 30px;
-  background: rgba(255, 192, 203, 0.3);
-  text-align: center;
-  direction: ltr
+  bottom: 16px;
+  left: 16px;
+  z-index: 2;
 }
 
 /* Timer */
 .banner-timer {
-  background-color: rgba(214, 51, 132, 0.75);
+  /* background-color: rgba(214, 51, 132, 0.75); */
   color: white;
-  padding: 12px 16px;
+  /* padding: 12px 16px; */
   border-radius: 12px;
   font-weight: bold;
   font-size: 0.95em;
@@ -160,6 +152,59 @@ section {
 }
 
 
+/* ****************** */
+
+.hero-timer-container {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  direction: rtl;
+  color: #d63384;
+  font-family: 'Vazirmatn', 'IRANYekan', sans-serif;
+  text-align: center;
+  z-index: 10;
+}
+
+
+.hero-timer-countdown {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  border: 2px solid #d63384;
+  width: 36px;
+  height: 36px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  font-size: 0.65rem;
+  margin-top: 2px;
+  line-height: 1;
+}
+
+.hero-timer-caption {
+  font-size: 0.7rem;
+  margin-top: 4px;
+  color: #333;
+}
+
+
+
+/* ****************** */
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -248,7 +293,7 @@ i {
 }
 
 .timer-text {
-  font-size: 1em;
+  font-size: 0.4em;
   /* margin-bottom: 4px; */
 }
 

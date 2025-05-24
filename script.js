@@ -1,40 +1,69 @@
-const countDownDate = new Date("2025-06-01T23:59:59").getTime();
-const timerTextEl = document.querySelector(".timer-text");
+const toPersianDigits = (str) =>
+  str.toString().replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[d]);
 
-const timerMode = 'simple'; // 'full' or 'simple'
+const countdownDate = new Date("2025-06-01T23:59:59").getTime();
 
-const toPersianDigits = str =>
-  str.toString().replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+const dayEl = document.getElementById("day");
+const hourEl = document.getElementById("hour");
+const minuteEl = document.getElementById("minute");
 
-const formatNumber = num => num.toString().padStart(2, "0");
-
-const countdown = setInterval(() => {
+setInterval(() => {
   const now = new Date().getTime();
-  const distance = countDownDate - now;
+  const distance = countdownDate - now;
 
-  if (distance < 0) {
-    clearInterval(countdown);
-    timerTextEl.innerHTML = "🎉 زمان به پایان رسید!";
-    return;
-  }
+  if (distance < 0) return;
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  if (timerMode === 'full') {
-    timerTextEl.innerHTML = toPersianDigits(
-      `${days} روز و ${formatNumber(hours)} ساعت و ${formatNumber(minutes)} دقیقه و ${formatNumber(seconds)} ثانیه`
-    );
-  } else if (timerMode === 'simple') {
-    const totalHours = days * 24 + hours;
-    timerTextEl.innerHTML = toPersianDigits(
-      `${formatNumber(totalHours)}:${formatNumber(minutes)}:${formatNumber(seconds)}`
-    );
-  }
-
+  dayEl.textContent = toPersianDigits(days);
+  hourEl.textContent = toPersianDigits(hours.toString().padStart(2, '0'));
+  minuteEl.textContent = toPersianDigits(minutes.toString().padStart(2, '0'));
 }, 1000);
+
+
+
+
+// const countDownDate = new Date("2025-06-01T23:59:59").getTime();
+// const timerTextEl = document.querySelector(".timer-text");
+
+// const timerMode = 'full'; // 'full' or 'simple'
+
+// const toPersianDigits = str =>
+//   str.toString().replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+
+// const formatNumber = num => num.toString().padStart(2, "0");
+
+// const countdown = setInterval(() => {
+//   const now = new Date().getTime();
+//   const distance = countDownDate - now;
+
+//   if (distance < 0) {
+//     clearInterval(countdown);
+//     timerTextEl.innerHTML = "🎉 زمان به پایان رسید!";
+//     return;
+//   }
+
+//   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+//   if (timerMode === 'full') {
+//     timerTextEl.innerHTML = toPersianDigits(
+//       // `${days} روز و ${formatNumber(hours)} ساعت و ${formatNumber(minutes)} دقیقه و ${formatNumber(seconds)} ثانیه`
+//       `${days} روز و ${formatNumber(hours)} ساعت و ${formatNumber(minutes)} دقیقه`
+//     );
+//   } else if (timerMode === 'simple') {
+//     const totalHours = days * 24 + hours;
+//     timerTextEl.innerHTML = toPersianDigits(
+//       `${formatNumber(totalHours)}:${formatNumber(minutes)}:${formatNumber(seconds)}`
+//     );
+//   }
+
+// }, 1000);
 
 
 
@@ -62,22 +91,22 @@ window.addEventListener("scroll", () => {
 
 
 
-  const questions = document.querySelectorAll('.qa-question');
+const questions = document.querySelectorAll('.qa-question');
 
-  questions.forEach((q) => {
-    q.addEventListener('click', () => {
-      const answer = q.nextElementSibling;
-      const isOpen = answer.style.display === 'block';
+questions.forEach((q) => {
+  q.addEventListener('click', () => {
+    const answer = q.nextElementSibling;
+    const isOpen = answer.style.display === 'block';
 
-      // Close all answers
-      document.querySelectorAll('.qa-answer').forEach(a => a.style.display = 'none');
-      document.querySelectorAll('.qa-question').forEach(btn => btn.classList.remove('active'));
+    // Close all answers
+    document.querySelectorAll('.qa-answer').forEach(a => a.style.display = 'none');
+    document.querySelectorAll('.qa-question').forEach(btn => btn.classList.remove('active'));
 
-      // Toggle clicked one
-      if (!isOpen) {
-        answer.style.display = 'block';
-        q.classList.add('active');
-      }
-    });
+    // Toggle clicked one
+    if (!isOpen) {
+      answer.style.display = 'block';
+      q.classList.add('active');
+    }
   });
+});
 

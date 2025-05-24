@@ -31,19 +31,45 @@
         <!-- 🎉 Birthday Banner Section -->
         <section class="hero-banner">
             <picture>
-                <!-- Mobile -->
-                <source media="(max-width: 768px)" srcset="https://placehold.co/750x900?text=Banner+Mobile" />
-                <!-- Desktop -->
-                <img src="https://placehold.co/1920x600?text=Banner+Desktop" alt="جشن تولد" class="banner-img" />
+                <source media="(max-width: 768px)" srcset="https://placehold.co/340x180?text=Banner+Mobile" />
+                <img src="https://placehold.co/1920x240?text=Banner+Desktop" alt="جشن تولد" class="banner-img" />
             </picture>
 
-            <div class="banner-overlay">
-                <div id="timer" class="banner-timer">
-                    <div class="timer-text">در حال بارگذاری...</div>
-                    <div class="timer-label" style="font-size:medium;">مانده به</div>
-                    <div class="timer-label"> جشن تولد خانومی</div>
+            <div class="hero-timer-container">
+                <div class="hero-timer-countdown">
+                    <div class="unit">
+                        <div class="value" id="day">۰</div>
+                        <div class="label">روز</div>
+                    </div>
+                    <div class="unit">
+                        <div class="value" id="hour">۰۰</div>
+                        <div class="label">ساعت</div>
+                    </div>
+                    <div class="unit">
+                        <div class="value" id="minute">۰۰</div>
+                        <div class="label">دقیقه</div>
+                    </div>
                 </div>
+                <div class="hero-timer-caption">مانده به جشن تولد خانومی</div>
             </div>
+
+            <!-- <div class="banner-overlay">
+                <div id="timer" class="banner-timer clean-timer">
+                    <div class="timer-text">در حال بارگذاری...</div>
+                    <div class="timer-label" style="font-size:0.3em">مانده به</div>
+                    <div class="timer-label" style="font-size:0.4em">جشن تولد خانومی</div>
+                </div>
+            </div> -->
+        </section>
+
+
+        <section class="hero-banner" style="margin-top: 8px;">
+            <picture>
+                <!-- Mobile -->
+                <source media="(max-width: 768px)" srcset="https://placehold.co/355x78?text=Banner+Mobile" />
+                <!-- Desktop -->
+                <img src="https://placehold.co/1920x120?text=Banner+Supermarket" alt="بنر دوم" class="banner-img" />
+            </picture>
         </section>
 
         <!-- بخش پیشنهاد تولد -->
@@ -53,34 +79,34 @@
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="#"><img src="https://placehold.co/250x250" alt="محصول ۱" /></a>
+                        <a href="#"><img src="https://placehold.co/200x250" alt="محصول ۱" /></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="https://placehold.co/250x250" alt="محصول ۲" /></a>
+                        <a href="#"><img src="https://placehold.co/200x250" alt="محصول ۲" /></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="https://placehold.co/250x250" alt="محصول 3" /></a>
+                        <a href="#"><img src="https://placehold.co/200x250" alt="محصول 3" /></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="https://placehold.co/250x250" alt="محصول 4" /></a>
+                        <a href="#"><img src="https://placehold.co/200x250" alt="محصول 4" /></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="https://placehold.co/250x250" alt="محصول 5" /></a>
+                        <a href="#"><img src="https://placehold.co/200x250" alt="محصول 5" /></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="https://placehold.co/250x250" alt="محصول 6" /></a>
+                        <a href="#"><img src="https://placehold.co/200x250" alt="محصول 6" /></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="https://placehold.co/250x250" alt="محصول 7" /></a>
+                        <a href="#"><img src="https://placehold.co/200x250" alt="محصول 7" /></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="https://placehold.co/250x250" alt="محصول 8" /></a>
+                        <a href="#"><img src="https://placehold.co/200x250" alt="محصول 8" /></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="https://placehold.co/250x250" alt="محصول 9" /></a>
+                        <a href="#"><img src="https://placehold.co/200x250" alt="محصول 9" /></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#"><img src="https://placehold.co/250x250" alt="محصول 10" /></a>
+                        <a href="#"><img src="https://placehold.co/200x250" alt="محصول 10" /></a>
                     </div>
                 </div>
                 <div class="swiper-button-next"><i class="fa-solid fa-circle-chevron-left fa-3x"></i></div>
