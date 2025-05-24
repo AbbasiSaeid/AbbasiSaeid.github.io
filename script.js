@@ -158,6 +158,8 @@ fetch(sheetURL)
       document.getElementById("campaign-carousel").appendChild(slide);
     });
 
+    document.getElementById("carousel-loading").style.display = "none";
+
     new Swiper(".second-swiper", {
       slidesPerView: 2.5,
       spaceBetween: 12,

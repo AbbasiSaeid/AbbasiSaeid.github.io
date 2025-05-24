@@ -762,3 +762,10 @@ i {
   margin-left: 6px;
 }
 /*  */
+.loading-message {
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  color: #d63384;
+  font-weight: bold;
+}
