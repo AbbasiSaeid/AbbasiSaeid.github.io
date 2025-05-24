@@ -720,3 +720,38 @@ i {
     aspect-ratio: 4 / 3;
   }
 }
+
+
+
+/*  */
+
+
+.product-card {
+  display: block;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
+  padding: 8px;
+  font-family: 'Vazirmatn', sans-serif;
+  color: #222;
+  font-size: 0.9rem;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.product-card p {
+  margin: 4px 0;
+}
+
+.product-card del {
+  color: #aaa;
+  margin-left: 6px;
+}
+/*  */

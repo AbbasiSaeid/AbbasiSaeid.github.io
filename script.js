@@ -110,3 +110,44 @@ questions.forEach((q) => {
   });
 });
 
+
+
+
+
+// 
+// 
+// 
+const sheetURL = 'https://api.sheetbest.com/sheets/693521a9-32fb-42e9-bc2c-6447a06be207'; // replace with your real one
+
+fetch(sheetURL)
+  .then(res => res.json())
+  .then(data => {
+    const sorted = data
+      .filter(item => item.image_url && item.title)
+      .sort((a, b) => Number(a.order) - Number(b.order));
+
+    sorted.forEach(item => {
+      const slide = document.createElement("div");
+      slide.className = "swiper-slide";
+      slide.innerHTML = `
+        <a href="${item.link || '#'}" target="_blank" class="product-card">
+          <img src="${item.image_url}" alt="${item.title}" />
+          <h4>${item.title}</h4>
+          <p><del>${item.price} تومان</del> <strong>${item.sale_price} تومان</strong></p>
+        </a>
+      `;
+      document.getElementById("campaign-carousel").appendChild(slide);
+    });
+
+    new Swiper(".second-swiper", {
+      slidesPerView: 1.5,
+      spaceBetween: 10,
+      breakpoints: {
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 20
+        }
+      }
+    });
+  });
+
