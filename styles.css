@@ -179,12 +179,13 @@ section {
 }
 
 .value {
-  border: 2px solid #d63384;
-  width: 36px;
-  height: 36px;
+  /* border: 2px solid #d63384; */
+  border: 2px solid #947383;
+  width: 30px;
+  height: 30px;
   font-size: 0.9rem;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,7 +193,7 @@ section {
 
 .label {
   font-size: 0.65rem;
-  margin-top: 2px;
+  margin-top: 3px;
   line-height: 1;
 }
 
