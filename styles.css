@@ -158,8 +158,8 @@ section {
 
 .hero-timer-container {
   position: absolute;
-  bottom: 12px;
-  right: 30px;
+  bottom: 5px;
+  right: 26px;
   direction: rtl;
   color: #d63384;
   font-family: 'Vazirmatn', 'IRANYekan', sans-serif;
@@ -170,7 +170,7 @@ section {
 
 .hero-timer-countdown {
   display: flex;
-  gap: 4px;
+  gap: 6px;
   justify-content: center;
 }
 
@@ -181,22 +181,38 @@ section {
 }
 
 .value {
+  border: 2px solid #d63384;
+  background: rgba(255, 255, 255, 0.8);
+  /* subtle white bg for contrast */
+  width: 37px;
+  height: 37px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* border: 2px solid #d63384; */
-  border: 1.5px solid #947383;
+  /* border: 1.5px solid #947383;
   width: 30px;
   height: 30px;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   font-weight: bold;
   border-radius: 2px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .label {
-  font-size: 0.65rem;
-  margin-top: 3px;
+  /* font-size: 1rem;
+  margin-top: 3px; */
   line-height: 1;
+  font-size: 0.55rem;
+  margin-top: 3px;
+  color: #333;
+  font-weight: 600;
+
 }
 
 .hero-timer-caption {
@@ -766,7 +782,7 @@ i {
   }
 
   .hero-timer-container {
-    right:160px;
+    right: 160px;
   }
 
   .category-card {
