@@ -153,6 +153,37 @@ section {
   transform: rotate(180deg);
 }
 
+.collapsible-content {
+  max-height: 140px;
+  /* adjust how much is shown by default */
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  position: relative;
+}
+
+.collapsible.expanded .collapsible-content {
+  max-height: 1000px;
+  /* large enough for full text */
+}
+
+.toggle-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #d63384;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #b12a6c;
+}
+
+
 
 /* ****************** */
 

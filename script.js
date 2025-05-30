@@ -179,4 +179,13 @@ fetch(sheetURL)
     });
   });
 
+document.querySelectorAll('.toggle-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const box = button.closest('.collapsible');
+    box.classList.toggle('expanded');
+    button.textContent = box.classList.contains('expanded') ? 'بستن' : 'مشاهده بیشتر';
+  });
+});
+
+
 
