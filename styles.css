@@ -12,7 +12,8 @@ body {
 }
 
 body {
-  padding-top: 40px; /* Adjust to match banner height */
+  padding-top: 40px;
+  /* Adjust to match banner height */
 }
 
 /* Images */
@@ -57,9 +58,10 @@ section {
   font-weight: bold;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   direction: rtl;
-  unicode-bidi: plaintext; /* 💥 smooth out visual alignment for mixed content */
+  unicode-bidi: plaintext;
+  /* 💥 smooth out visual alignment for mixed content */
   box-sizing: border-box;
-  margin:0;
+  margin: 0;
 }
 
 
@@ -69,7 +71,7 @@ section {
   width: 100%;
   overflow: hidden;
   margin: 0;
-  margin-top:8px;
+  margin-top: 8px;
   padding: 0;
 }
 
@@ -157,7 +159,7 @@ section {
 .hero-timer-container {
   position: absolute;
   bottom: 12px;
-  left: 12px;
+  right: 30px;
   direction: rtl;
   color: #d63384;
   font-family: 'Vazirmatn', 'IRANYekan', sans-serif;
@@ -180,12 +182,12 @@ section {
 
 .value {
   /* border: 2px solid #d63384; */
-  border: 2px solid #947383;
+  border: 1.5px solid #947383;
   width: 30px;
   height: 30px;
   font-size: 0.9rem;
   font-weight: bold;
-  border-radius: 20px;
+  border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -211,6 +213,7 @@ section {
     transform: scale(1);
     opacity: 0.6;
   }
+
   100% {
     transform: scale(2.5);
     opacity: 0;
@@ -218,9 +221,12 @@ section {
 }
 
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
+
   50% {
     transform: translateX(-50%) translateY(-6px);
   }
@@ -235,7 +241,8 @@ section {
 .scroll-down-arrow span {
   display: inline-block;
   line-height: 1;
-  transform: translateY(2px); /* vertical center tweak */
+  transform: translateY(2px);
+  /* vertical center tweak */
 }
 
 
@@ -335,10 +342,11 @@ i {
   font-weight: bold;
   color: #d63384;
   direction: rtl;
-  text-align: center; /* ✅ center the block */
+  text-align: center;
+  /* ✅ center the block */
   margin: 0 auto 16px;
   max-width: fit-content;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .category-row {
@@ -349,7 +357,8 @@ i {
 }
 
 .category-card {
-  flex: 1 1 calc(50% - 16px); /* 2 per row on mobile */
+  flex: 1 1 calc(50% - 16px);
+  /* 2 per row on mobile */
   max-width: 48%;
   aspect-ratio: 4 / 3;
   background-color: #fff;
@@ -390,17 +399,21 @@ i {
 .video-box {
   flex: 1 1 300px;
   background: #fff;
-  padding: 0; /* صفر شد */
+  padding: 0;
+  /* صفر شد */
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  overflow: hidden; /* برای برش گوشه‌ها */
+  overflow: hidden;
+  /* برای برش گوشه‌ها */
 }
 
 .video-box video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 👈 کلید کار اینجاست */
-  border-radius: 0; /* چون parent داره rounded میشه */
+  object-fit: cover;
+  /* 👈 کلید کار اینجاست */
+  border-radius: 0;
+  /* چون parent داره rounded میشه */
   display: block;
 }
 
@@ -535,7 +548,8 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px; /* space between icons */
+  gap: 12px;
+  /* space between icons */
   margin-top: 8px;
 }
 
@@ -648,12 +662,18 @@ i {
 
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 
 @media (max-width: 768px) {
+
   .k-footer__links {
     flex-direction: column;
     align-items: center;
@@ -664,14 +684,15 @@ i {
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* نسبت 16:9 */
+  padding-bottom: 56.25%;
+  /* نسبت 16:9 */
   height: 0;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.video-wrapper > div {
+.video-wrapper>div {
   position: absolute;
   top: 0;
   left: 0;
@@ -740,11 +761,17 @@ i {
 
 @media (min-width: 768px) {
   .category-row {
-    justify-content: space-between; /* wider spread */
+    justify-content: space-between;
+    /* wider spread */
+  }
+
+  .hero-timer-container {
+    right:160px;
   }
 
   .category-card {
-    flex: 1 1 calc(25% - 16px); /* 4 per row on desktop */
+    flex: 1 1 calc(25% - 16px);
+    /* 4 per row on desktop */
     max-width: 220px;
     aspect-ratio: 4 / 3;
   }
@@ -761,7 +788,7 @@ i {
   border-radius: 10px;
   text-align: center;
   overflow: hidden;
-  box-shadow: 0 0 8px rgba(0,0,0,0.08);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
   padding: 2px;
   font-family: 'Vazirmatn', sans-serif;
   color: #222;
@@ -790,6 +817,7 @@ i {
   color: #aaa;
   margin-left: 6px;
 }
+
 /*  */
 .loading-message {
   text-align: center;
