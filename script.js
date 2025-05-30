@@ -161,7 +161,7 @@ fetch(sheetURL)
     document.getElementById("carousel-loading").style.display = "none";
 
     new Swiper(".second-swiper", {
-      slidesPerView: 2.5,
+      slidesPerView: 1.5,
       spaceBetween: 12,
       grabCursor: true,
       freeMode: true,
@@ -178,23 +178,5 @@ fetch(sheetURL)
       }
     });
   });
-
-  const categorySwiper = new Swiper(".categorySwiper", {
-    slidesPerView: 2.5,
-    spaceBetween: 12,
-    grabCursor: true,
-    freeMode: true,
-    loop: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-    },
-    breakpoints: {
-        768: {
-            slidesPerView: 6,
-            spaceBetween: 20
-        }
-    }
-});
 
 
