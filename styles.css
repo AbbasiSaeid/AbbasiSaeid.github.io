@@ -27,7 +27,7 @@ img {
 /* Headings */
 h2,
 h3 {
-  color: #d63384;
+  color: black;
   text-align: center;
   /* margin-top: 40px; */
 }
@@ -302,7 +302,7 @@ section {
   text-align: right;
   font-size: 1em;
   margin-bottom: 16px;
-  color: #d63384;
+  color: black;
   padding-right: 20px;
 }
 
@@ -387,7 +387,7 @@ i {
 .category-title {
   font-size: 1em;
   font-weight: bold;
-  color: #d63384;
+  color: black;
   direction: rtl;
   text-align: center;
   /* ✅ center the block */
