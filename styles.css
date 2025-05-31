@@ -189,7 +189,7 @@ section {
 
 .hero-timer-container {
   position: absolute;
-  bottom: 5px;
+  bottom: 0px;
   right: 26px;
   direction: rtl;
   color: #d63384;
@@ -813,7 +813,9 @@ i {
   }
 
   .hero-timer-container {
-    right: 160px;
+    top: 75%;
+    left: 65%;
+    transform: translate(-50%, -50%);
   }
 
   .category-card {
