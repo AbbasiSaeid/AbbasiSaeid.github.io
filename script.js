@@ -1,7 +1,7 @@
 const toPersianDigits = (str) =>
   str.toString().replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[d]);
 
-const countdownDate = new Date("2025-06-01T23:59:59").getTime();
+const countdownDate = new Date("2025-06-09T21:00:00").getTime();
 
 const dayEl = document.getElementById("day");
 const hourEl = document.getElementById("hour");
