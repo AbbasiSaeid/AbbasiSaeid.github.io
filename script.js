@@ -161,7 +161,7 @@ fetch(sheetURL)
     document.getElementById("carousel-loading").style.display = "none";
 
     new Swiper(".second-swiper", {
-      slidesPerView: 2.1,
+      slidesPerView: 2.25,
       spaceBetween: 12,
       grabCursor: true,
       freeMode: true,
